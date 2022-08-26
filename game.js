@@ -1,4 +1,7 @@
-
+if(window.screen.width< 700){
+  $('h1').html('pls switch to abigger screen')
+}
+else{
 var started = false;
 var storedInput = [];
 var gamePattern = [];
@@ -16,7 +19,7 @@ $('.btn').on("click", function(event){
   buttonAnnimation(colorInput);
   model.compareSound(storedInput,storedInput.length-1);
 });
-
+}
 var view = {
  gameOver: function(){
    $("h1").html("Game Over, Press Any Key to Restart");
